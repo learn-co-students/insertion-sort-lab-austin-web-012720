@@ -1,3 +1,4 @@
+//find minumum in an array and remove it
 function findMinAndRemove(array) {
   let index = 0;
   let curr = array[0];
@@ -12,6 +13,7 @@ function findMinAndRemove(array) {
   return curr;
 }
 
+//implement a selection sort method and call minAndRemove
 function selectionSort(array) {
   let min;
   let sorted = [];
