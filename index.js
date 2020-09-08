@@ -12,4 +12,13 @@ function findMinAndRemove(array) {
   return curr;
 }
 
-function selectionSort(array) {}
+function selectionSort(array) {
+  let min;
+  let sorted = [];
+
+  while (array.length != 0) {
+    min = findMinAndRemove(array);
+    sorted.push(min);
+  }
+  return sorted;
+}
