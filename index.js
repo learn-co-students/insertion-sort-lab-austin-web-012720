@@ -1,26 +1,26 @@
-//find minumum in an array and remove it
-function findMinAndRemove(array) {
+function findMinAndRemove(arr) {
+  let min = arr[0];
   let index = 0;
-  let curr = array[0];
-
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] < curr) {
-      curr = array[i];
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] < min){
+      min = arr[i];
       index = i;
     }
   }
-  array.splice(index, 1);
-  return curr;
+  console.log(arr, min, index);
+  arr.splice(index, 1);
+  return min;
 }
 
-//implement a selection sort method and call minAndRemove
-function selectionSort(array) {
-  let min;
+function selectionSort(arr){
   let sorted = [];
+  while (arr.length > 0){
+    console.log('arr before return', arr);
+    console.log('sorted before return', sorted);
+    sorted.push(findMinAndRemove(arr));
+    console.log('arr after return', arr);
+    console.log('sorted after return', sorted);
 
-  while (array.length != 0) {
-    min = findMinAndRemove(array);
-    sorted.push(min);
   }
   return sorted;
 }
